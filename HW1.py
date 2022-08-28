@@ -12,6 +12,6 @@ name = input("Enter a name:\n")
 n1 = int(input("Enter an integer number:\n"))
 n2 = int(input("Enter another integer number:\n"))
 
-#   Prints out name and sum of the two integers entere
+#   Prints out name and sum of the two integers entered
 
 print("Hello " + name + ", the sum of your two numbers is " + str(n1 + n2) + ".")
