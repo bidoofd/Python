@@ -9,7 +9,7 @@ def findCount(fn, countList, rowNum, userNumList):
 		data_from_file = csv.reader(file)
 		#Finds count values based on what is found
 		#Such as strings and ints
-		if userNumList:
+		if len(userNumList) > 0:
 			for row in data_from_file:
 				for a in range(0,5):
 					temp = row[rowNum]
@@ -123,12 +123,13 @@ def displayCrimeReport():
 	oldncic_code_count = [0,0,0,0,0,0,0,0,0,0]
 	olddistrict_count = [0,0,0,0,0,0]
 	oldbeat_count = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+	empty = []
 	fJSON = "/Users/trando/Desktop/coding/python/Python/Week 6/PROJECT1/January.json"
 	filename = "/Users/trando/Desktop/coding/python/Python/Week 6/PROJECT1/crime.csv"
 	#Using the findCount function to find the count of respective name
-	ncic_code_count = findCount(filename, oldncic_code_count, 6)
-	district_count = findCount(filename, olddistrict_count, 2)
-	beat_count = findCount(filename, oldbeat_count, 3)
+	ncic_code_count = findCount(filename, oldncic_code_count, 6, empty)
+	district_count = findCount(filename, olddistrict_count, 2, empty)
+	beat_count = findCount(filename, oldbeat_count, 3, empty)
 
 	#Opening JSON file
 	try:
