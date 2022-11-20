@@ -1,5 +1,5 @@
 import csv
-filename = "C:/Users/draus/Desktop/Spring_2020b/Week6/files/green.csv"
+filename = "C:/Users/Tran/Desktop/coding/python/Week 6/CSV EXAMPLE/green.csv"
 with open(filename) as file:
 	data_from_file = csv.reader(file)
 	header_row = next(data_from_file)
